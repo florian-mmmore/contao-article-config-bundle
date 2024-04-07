@@ -1,0 +1,41 @@
+{
+  "name": "dreibein/contao-article-config-bundle",
+  "type": "contao-bundle",
+  "description": "Dreibein Article-Config",
+  "license": "LGPL-3.0+",
+  "authors": [
+    {
+      "name": "Thomas Voggenreiter",
+      "email": "t.voggenreiter@agentur-dreibein.de",
+      "homepage": "https://www.agentur-dreibein.de"
+    }
+  ],
+  "require": {
+    "php": "^7.2",
+    "contao/core-bundle": "^4.4"
+  },
+  "require-dev": {
+    "contao/manager-plugin": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Dreibein\\ArticleConfigBundle\\": "src/"
+    },
+    "classmap": [
+      "src/Resources/contao/"
+    ],
+    "exclude-from-classmap": [
+      "src/Resources/contao/config/",
+      "src/Resources/contao/dca/",
+      "src/Resources/contao/languages/",
+      "src/Resources/contao/templates/"
+    ]
+  },
+  "prefer-stable": true,
+  "config": {
+    "preferred-install": "dist"
+  },
+  "extra": {
+    "contao-manager-plugin": "Dreibein\\ArticleConfigBundle\\ContaoManager\\Plugin"
+  }
+}
